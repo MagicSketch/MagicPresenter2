@@ -19,7 +19,7 @@
 
 - (void)commonInit {
     _renderer = [[MagicPresenterArtboardRenderer alloc] init];
-    _index = 0;
+    _index = -1;
 }
 
 - (instancetype)initWithWindowNibName:(NSString *)windowNibName {
@@ -46,13 +46,24 @@
 
 - (void)reloadData {
     __weak __typeof (self) weakSelf = self;
-    id artboard = self.artboards[self.index];
     if ( ! _renderer.context) {
         return;
     }
-    if ( ! artboard) {
+    if ( ! _artboards) {
         return;
     }
+    if ( _index == -1) {
+        id selectedArtboardObjectID = [[_context valueForKeyPath:@"selection.parentArtboard.objectID"] firstObject];
+        NSArray *artboardIDs = [self.artboards valueForKeyPath:@"objectID"];
+        _index = [artboardIDs indexOfObject:selectedArtboardObjectID];
+        if (_index == NSNotFound) {
+            _index = 0;
+        }
+    }
+    if ( _index >= [_artboards count]) {
+        return;
+    }
+    id artboard = self.artboards[self.index];
     [_renderer renderArtboard:artboard completion:^(NSImage *image) {
         weakSelf.imageView.image = image;
     }];
