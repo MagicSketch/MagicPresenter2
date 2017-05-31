@@ -69,14 +69,45 @@
     }];
 }
 
-- (IBAction)leftButtonDidPress:(id)sender {
+- (void)goNext {
+    self.index = MIN(_index + 1, [self.artboards count] - 1);
+    [self reloadData];
+}
+
+- (void)goPrevious {
     self.index = MAX(_index - 1, 0);
     [self reloadData];
 }
 
+- (IBAction)leftButtonDidPress:(id)sender {
+    [self goPrevious];
+}
+
 - (IBAction)rightButtonDidPress:(id)sender {
-    self.index = MIN(_index + 1, [self.artboards count] - 1);
-    [self reloadData];
+    [self goNext];
+}
+
+- (BOOL)acceptsFirstResponder {
+    return YES;
+}
+
+- (void)keyDown:(NSEvent *)event {
+    NSLog(@"keyDown %@", @([event keyCode]));
+
+    switch ([event keyCode]) {
+
+        case 125: // down
+        case 124: // right
+            [self goNext];
+            break;
+
+        case 126: // top
+        case 123: // left
+            [self goPrevious];
+            break;
+        default:
+            break;
+    }
 }
 
 @end
