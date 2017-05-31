@@ -41,6 +41,7 @@
 
 - (void)windowDidLoad {
     [super windowDidLoad];
+    _imageView.imageScaling = NSImageScaleProportionallyUpOrDown;
     [self reloadData];
 }
 
