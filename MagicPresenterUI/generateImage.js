@@ -3,10 +3,6 @@ var generateImage = function(document, layer, scale) {
     var array = MSLayerArray.arrayWithLayer(layer)
     var data = document.immutableDocumentData()
     var impage = data.currentPage()
-
-    log("document" + document);
-    log("data" + data);
-    log("impage" + impage);
     
     var request = nil;
     if ([layer isKindOfClass:MSSliceLayer]) {
