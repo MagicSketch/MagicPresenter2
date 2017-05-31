@@ -26,7 +26,17 @@
 					"SelectionChanged.finish" : "onSelectionChanged"
 				}
 			}
-		}
+		},
+         {
+             "script" : "MagicPresenterUI.framework/MagicPresenterUI.js",
+                 "handlers" : {
+                 "actions" : {
+                     "Startup" : "onStartup",
+                     "OpenDocument":"onOpenDocument",
+                     "SelectionChanged.finish" : "onSelectionChanged"
+                 }
+             }
+         }
 	],
 	"menu": {
 		"isRoot" : false,
