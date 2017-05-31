@@ -65,6 +65,8 @@
         return;
     }
     id artboard = self.artboards[self.index];
+
+    self.window.title = [NSString stringWithFormat:@"Page %@ of %@ (%@)", @(_index), @([self.artboards count] - 1), [_context valueForKeyPath:@"document.fileName"]];
     [_renderer renderArtboard:artboard completion:^(NSImage *image) {
         weakSelf.imageView.image = image;
     }];
