@@ -1,6 +1,15 @@
+
 var onRun = function(context) {
-  log("onRun");
-  context.document.showMessage("onRun");
+    log("onRun");
+    var presenter = Mocha.sharedRuntime().valueForKey("MP");
+    if ( ! presenter) {
+        presenter = MagicPresenter.alloc().init();
+        Mocha.sharedRuntime().setValue_forKey_(presenter, "MP");
+    }
+
+    presenter.play(context)
+    context.document.showMessage("onRun" + presenter);
+    coscript.setShouldKeepAround(true)
 }
 
 var onStartup = function(context) {
