@@ -39,7 +39,14 @@
 - (void)selectionDidChange:(id)context {
     _context = context;
 
-    self.selection = @[[[MagicPresenterUtilGetSelection(context) firstObject] valueForKeyPath:@"parentArtboard"]];
+    NSArray *selection = MagicPresenterUtilGetSelection(context);
+
+    if (selection && [selection respondsToSelector:@selector(firstObject)] && [selection firstObject]) {
+        selection = @[[[selection firstObject] valueForKeyPath:@"parentArtboard"]];
+    } else {
+        selection = @[];
+    }
+    self.selection = selection;
     self.panel.stackView = MagicPresenterUtilGetStackView(context);
     [self.panel reloadData];
 }
@@ -53,7 +60,7 @@
         cell.reuseIdentifier = @"header";
     }
     cell.context = self.context;
-    cell.titleLabel.stringValue = @"MagicPresenterUI";
+    cell.titleLabel.stringValue = @"Magic Presenter 2";
     return cell;
 }
 
@@ -70,10 +77,8 @@
 
     id layer = self.selection[0];
     _renderer.context = self.context;
-    NSLog(@"_renderer %@", _renderer);
 
     [_renderer renderArtboard:layer scale:0.2 completion:^(NSImage *image) {
-        NSLog(@"image %@", image);
         cell.imageView.image = image;
     }];
 

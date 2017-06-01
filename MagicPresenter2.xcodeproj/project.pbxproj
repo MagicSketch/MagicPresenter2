@@ -40,6 +40,7 @@
 		1A14633D1EDF23C4005C02F0 /* generateImage.js in Resources */ = {isa = PBXBuildFile; fileRef = 1A08842A1EDF20D300748157 /* generateImage.js */; };
 		1A1463421EDFCBA6005C02F0 /* MagicPresenterUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A1463401EDFCBA6005C02F0 /* MagicPresenterUtil.h */; };
 		1A1463431EDFCBA6005C02F0 /* MagicPresenterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463411EDFCBA6005C02F0 /* MagicPresenterUtil.m */; };
+		1A1463491EE03449005C02F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1463481EE03449005C02F0 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		1A08842A1EDF20D300748157 /* generateImage.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = generateImage.js; sourceTree = "<group>"; };
 		1A1463401EDFCBA6005C02F0 /* MagicPresenterUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicPresenterUtil.h; sourceTree = "<group>"; };
 		1A1463411EDFCBA6005C02F0 /* MagicPresenterUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicPresenterUtil.m; sourceTree = "<group>"; };
+		1A1463481EE03449005C02F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				1A0884241EDF1B3800748157 /* MagicPresenterArtboardRenderer.h */,
 				1A0884251EDF1B3800748157 /* MagicPresenterArtboardRenderer.m */,
 				1A08842A1EDF20D300748157 /* generateImage.js */,
+				1A1463481EE03449005C02F0 /* Assets.xcassets */,
 			);
 			name = "User Subclasses";
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				1A0884051EDF11D900748157 /* MagicPresenterUISketchPanelCellHeader.xib in Resources */,
 				1A14633D1EDF23C4005C02F0 /* generateImage.js in Resources */,
 				1A0883E81EDF11D900748157 /* MagicPresenterUI.js in Resources */,
+				1A1463491EE03449005C02F0 /* Assets.xcassets in Resources */,
 				1A0883FF1EDF11D900748157 /* MagicPresenterUISketchPanelCellDefault.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,10 +23,10 @@
                     </textFieldCell>
                 </textField>
                 <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FZF-iZ-q29">
-                    <rect key="frame" x="191" y="6" width="13" height="13"/>
+                    <rect key="frame" x="187" y="3" width="20" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="disclosureTriangle" bezelStyle="disclosure" imagePosition="above" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="crH-0e-pQz">
-                        <behavior key="behavior" pushIn="YES" changeBackground="YES" changeGray="YES" lightByContents="YES"/>
+                    <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="icon-play" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="crH-0e-pQz">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
@@ -40,4 +40,7 @@
             <point key="canvasLocation" x="-32" y="197"/>
         </customView>
     </objects>
+    <resources>
+        <image name="icon-play" width="20" height="20"/>
+    </resources>
 </document>
