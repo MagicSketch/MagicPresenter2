@@ -16,4 +16,11 @@
     // Drawing code here.
 }
 
+- (void)setAspectRatio:(NSSize)aspectRatio {
+    _aspectRatio = aspectRatio;
+    CGFloat width = self.bounds.size.width;
+    CGFloat height = (width - 16) * _aspectRatio.height / _aspectRatio.width;
+    [self setFrameSize:NSMakeSize(width, height + 16)];
+}
+
 @end

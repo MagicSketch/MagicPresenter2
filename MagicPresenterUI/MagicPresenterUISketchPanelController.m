@@ -14,6 +14,7 @@
 #import "MagicPresenterUISketchPanelDataSource.h"
 #import "MagicPresenterUtil.h"
 #import "MagicPresenterArtboardRenderer.h"
+#import "MagicPresenterUISketchPanelCellLayer.h"
 
 @interface MagicPresenterUISketchPanelController ()
 
@@ -42,7 +43,13 @@
     NSArray *selection = MagicPresenterUtilGetSelection(context);
 
     if (selection && [selection respondsToSelector:@selector(firstObject)] && [selection firstObject]) {
-        selection = @[[[selection firstObject] valueForKeyPath:@"parentArtboard"]];
+
+        if ([[selection firstObject] isMemberOfClass:NSClassFromString(@"MSArtboardGroup")]) {
+            selection = @[[selection firstObject]];
+        } else {
+            selection = @[[[selection firstObject] valueForKeyPath:@"parentArtboard"],
+                          [selection firstObject]];
+        }
     } else {
         selection = @[];
     }
@@ -69,20 +76,42 @@
 }
 
 - (MagicPresenterUISketchPanelCell *)MagicPresenterUISketchPanel:(MagicPresenterUISketchPanel *)panel itemForRowAtIndex:(NSUInteger)index {
-    MagicPresenterUISketchPanelCellDefault *cell = (MagicPresenterUISketchPanelCellDefault *)[panel dequeueReusableCellForReuseIdentifier:@"cell"];
-    if ( ! cell) {
-        cell = [MagicPresenterUISketchPanelCellDefault loadNibNamed:@"MagicPresenterUISketchPanelCellDefault"];
-        cell.reuseIdentifier = @"cell";
+
+    id layer = self.selection[index];
+
+    if ([layer isMemberOfClass:NSClassFromString(@"MSArtboardGroup")]) {
+
+        MagicPresenterUISketchPanelCellDefault *cell = (MagicPresenterUISketchPanelCellDefault *)[panel dequeueReusableCellForReuseIdentifier:@"artboardCell"];
+        if ( ! cell) {
+            cell = [MagicPresenterUISketchPanelCellDefault loadNibNamed:@"MagicPresenterUISketchPanelCellDefault"];
+            cell.reuseIdentifier = @"artboardCell";
+        }
+
+        _renderer.context = self.context;
+
+        [_renderer renderArtboard:layer scale:0.2 completion:^(NSImage *image) {
+            cell.imageView.image = image;
+        }];
+
+        cell.aspectRatio = [(NSValue *)[layer valueForKeyPath:@"frame.size"] sizeValue];
+
+        return cell;
+
+    } else if ([layer isKindOfClass:NSClassFromString(@"MSLayer")]) {
+
+        MagicPresenterUISketchPanelCellLayer *cell = (MagicPresenterUISketchPanelCellLayer *)[panel dequeueReusableCellForReuseIdentifier:@"layerCell"];
+        if ( ! cell) {
+            cell = [MagicPresenterUISketchPanelCellLayer loadNibNamed:@"MagicPresenterUISketchPanelCellLayer"];
+            cell.reuseIdentifier = @"layerCell";
+        }
+
+        cell.context = self.context;
+        cell.mslayer = layer;
+
+        return cell;
     }
 
-    id layer = self.selection[0];
-    _renderer.context = self.context;
-
-    [_renderer renderArtboard:layer scale:0.2 completion:^(NSImage *image) {
-        cell.imageView.image = image;
-    }];
-
-    return cell;
+    return nil;
 }
 
 @end

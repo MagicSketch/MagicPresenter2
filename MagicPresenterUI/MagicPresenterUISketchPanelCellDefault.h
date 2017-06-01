@@ -13,5 +13,6 @@
 
 @property (nonatomic, weak) IBOutlet NSTextField *titleLabel;
 @property (nonatomic, weak) IBOutlet NSImageView *imageView;
+@property (nonatomic) NSSize aspectRatio;
 
 @end
