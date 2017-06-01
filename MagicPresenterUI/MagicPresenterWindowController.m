@@ -9,7 +9,7 @@
 #import "MagicPresenterWindowController.h"
 #import "MagicPresenterArtboardRenderer.h"
 
-@interface MagicPresenterWindowController ()
+@interface MagicPresenterWindowController () <NSWindowDelegate>
 
 @property (nonatomic, strong) MagicPresenterArtboardRenderer *renderer;
 
@@ -44,9 +44,7 @@
     _imageView.imageScaling = NSImageScaleProportionallyUpOrDown;
     [self reloadData];
 
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.window makeKeyAndOrderFront:self];
-    });
+    self.window.delegate = self;
 }
 
 - (void)reloadData {
@@ -134,6 +132,23 @@
         default:
             break;
     }
+}
+
+#pragma mark NSWindowDelegate
+
+- (void)windowDidEnterFullScreen:(NSNotification *)notification {
+    [self.window makeKeyAndOrderFront:self];
+}
+
+- (void)windowWillExitFullScreen:(NSNotification *)notification {
+    id artboard = self.artboards[self.index];
+    [artboard performSelector:NSSelectorFromString(@"selectLayers:") withObject:@[artboard] withObject:nil];
+    id view = [self.context valueForKeyPath:@"document.currentView"];
+    [view valueForKeyPath:@"centerSelectionInVisibleArea"];
+}
+
+- (void)windowDidExitFullScreen:(NSNotification *)notification {
+    [self.window makeKeyAndOrderFront:self];
 }
 
 @end
