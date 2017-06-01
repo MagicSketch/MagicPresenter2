@@ -13,12 +13,14 @@
 #import "MagicPresenterUISketchPanel.h"
 #import "MagicPresenterUISketchPanelDataSource.h"
 #import "MagicPresenterUtil.h"
+#import "MagicPresenterArtboardRenderer.h"
 
 @interface MagicPresenterUISketchPanelController ()
 
 @property (nonatomic, strong) id <MagicPresenterUIMSInspectorStackView> stackView; // MSInspectorStackView
 @property (nonatomic, strong) MagicPresenterUISketchPanel *panel;
 @property (nonatomic, copy) NSArray *selection;
+@property (nonatomic, strong) MagicPresenterArtboardRenderer *renderer;
 
 @end
 
@@ -29,6 +31,7 @@
         _context = context;
         _panel = [[MagicPresenterUISketchPanel alloc] initWithStackView:nil];
         _panel.datasource = self;
+        _renderer = [[MagicPresenterArtboardRenderer alloc] init];
     }
     return self;
 }
@@ -36,7 +39,7 @@
 - (void)selectionDidChange:(id)context {
     _context = context;
 
-    self.selection = MagicPresenterUtilGetSelection(context);
+    self.selection = @[[[MagicPresenterUtilGetSelection(context) firstObject] valueForKeyPath:@"parentArtboard"]];
     self.panel.stackView = MagicPresenterUtilGetStackView(context);
     [self.panel reloadData];
 }
@@ -65,9 +68,14 @@
         cell.reuseIdentifier = @"cell";
     }
 
-    id layer = self.selection[index];
-    cell.titleLabel.stringValue = [layer name];
-    cell.imageView.image = [layer valueForKeyPath:@"previewImages.LayerListPreviewUnfocusedImage"];
+    id layer = self.selection[0];
+    _renderer.context = self.context;
+    NSLog(@"_renderer %@", _renderer);
+
+    [_renderer renderArtboard:layer completion:^(NSImage *image) {
+        NSLog(@"image %@", image);
+        cell.imageView.image = image;
+    }];
 
     return cell;
 }

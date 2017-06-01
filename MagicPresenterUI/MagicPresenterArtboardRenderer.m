@@ -8,7 +8,7 @@
 
 #import "MagicPresenterArtboardRenderer.h"
 #import <CocoaScript/COScript.h>
-
+#import "MagicPresenterUtil.h"
 
 @interface MagicPresenterArtboardRenderer ()
 
@@ -29,7 +29,7 @@
     NSString *script = [self contentsOfFile:@"generateImage.js"];
     COScript *coscript = [[COScript alloc] init];
 
-    id document = self.context[@"document"];
+    id document = MagicPresenterUtilGetDocument(self.context);
 
     if ( ! document) {
         return;
