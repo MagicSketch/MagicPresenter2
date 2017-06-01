@@ -43,6 +43,10 @@
     [super windowDidLoad];
     _imageView.imageScaling = NSImageScaleProportionallyUpOrDown;
     [self reloadData];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.window makeKeyAndOrderFront:self];
+    });
 }
 
 - (void)reloadData {
