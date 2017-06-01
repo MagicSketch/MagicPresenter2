@@ -12,5 +12,6 @@
 @interface MagicPresenterUISketchPanelCellHeader : MagicPresenterUISketchPanelCell
 
 @property (nonatomic, weak) IBOutlet NSTextField *titleLabel;
+@property (nonatomic, copy) id context;
 
 @end

@@ -22,6 +22,7 @@
 @property (nonatomic, strong) MagicPresenterUISketchPanelController *panelController;
 @property (nonatomic, strong) id <MagicPresenterUIMSDocument> document;
 @property (nonatomic, copy) NSString *panelControllerClassName;
+@property (nonatomic, copy) id context;
 
 + (instancetype)onSelectionChanged:(id)context;
 - (void)onSelectionChange:(NSArray *)selection;
@@ -44,7 +45,6 @@ static id _command;
 }
 
 + (instancetype)onSelectionChanged:(id)context {
-
 //    COScript *coscript = [COScript currentCOScript];
 
     id <MagicPresenterUIMSDocument> document = [context valueForKeyPath:@"actionContext.document"];
@@ -62,26 +62,22 @@ static id _command;
 
     if ( ! instance) {
 //        [coscript setShouldKeepAround:YES];
-        instance = [[self alloc] initWithDocument:document];
+        instance = [[self alloc] initWithContext:context];
         [[Mocha sharedRuntime] setValue:instance forKey:key];
     }
-
-    NSArray *selection = [context valueForKeyPath:@"actionContext.document.selectedLayers"];
-//    NSLog(@"selection %p %@ %@", instance, key, selection);
-    [instance onSelectionChange:selection];
+    [instance onSelectionChange:context];
     return instance;
 }
 
-- (instancetype)initWithDocument:(id <MagicPresenterUIMSDocument>)document {
+- (instancetype)initWithContext:(id)context {
     if (self = [super init]) {
-        _document = document;
-        _panelController = [[MagicPresenterUISketchPanelController alloc] initWithDocument:_document];
+        _panelController = [[MagicPresenterUISketchPanelController alloc] initWithContext:_context];
     }
     return self;
 }
 
-- (void)onSelectionChange:(NSArray *)selection {
-    [_panelController selectionDidChange:selection];
+- (void)onSelectionChange:(id)context {
+    [_panelController selectionDidChange:context];
 }
 
 @end

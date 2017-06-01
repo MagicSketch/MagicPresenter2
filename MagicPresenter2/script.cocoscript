@@ -1,19 +1,33 @@
 
-var onRun = function(context) {
-    log("onRun");
-    var presenter = Mocha.sharedRuntime().valueForKey("MP");
-    if ( ! presenter) {
-        presenter = MagicPresenter.alloc().init();
-        Mocha.sharedRuntime().setValue_forKey_(presenter, "MP");
+var getMagicPresenter = function(context) {
+    if ( ! context.document) {
+        return nil;
     }
 
+    var app = [MSDocument currentDocument];
+    var key = app + "-MagicPresenter";
+
+    var presenter = Mocha.sharedRuntime().valueForKey(key);
+    if ( ! presenter) {
+        presenter = MagicPresenter.alloc().initWithContext(context);
+        Mocha.sharedRuntime().setValue_forKey_(presenter, key);
+    }
+
+    return presenter;
+}
+
+
+var onRun = function(context) {
+    log("onRun");
+    var presenter = getMagicPresenter(context);
     presenter.play(context)
     context.document.showMessage("onRun" + presenter);
     coscript.setShouldKeepAround(true)
 }
 
 var onStartup = function(context) {
-  log("onStartup");
+    var presenter = getMagicPresenter(context);
+    log("onStartup");
 }
 
 var onOpenDocument = function(context) {

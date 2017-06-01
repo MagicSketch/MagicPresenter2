@@ -11,6 +11,9 @@
 @interface MagicPresenter : NSObject
 
 //- (void)playSlides:(NSArray *)slides atIndex:(NSUInteger)index;
+
+- (instancetype)initWithContext:(id)context;
 - (void)play:(id)context;
++ (NSURL *)bundleURL;
 
 @end

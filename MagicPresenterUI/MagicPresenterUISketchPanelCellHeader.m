@@ -7,8 +7,14 @@
 //
 
 #import "MagicPresenterUISketchPanelCellHeader.h"
+#import "MagicPresenterUtil.h"
 
 @implementation MagicPresenterUISketchPanelCellHeader
+
+- (IBAction)playButtonDidPress:(id)sender {
+    NSString *actionID = @"run";
+    MagicPresenterUtilRunPluginCommand(_context, actionID);
+}
 
 - (void)drawRect:(NSRect)frame {
     [super drawRect:frame];

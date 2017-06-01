@@ -38,6 +38,8 @@
 		1A0884261EDF1B3800748157 /* MagicPresenterArtboardRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A0884241EDF1B3800748157 /* MagicPresenterArtboardRenderer.h */; };
 		1A0884271EDF1B3800748157 /* MagicPresenterArtboardRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0884251EDF1B3800748157 /* MagicPresenterArtboardRenderer.m */; };
 		1A14633D1EDF23C4005C02F0 /* generateImage.js in Resources */ = {isa = PBXBuildFile; fileRef = 1A08842A1EDF20D300748157 /* generateImage.js */; };
+		1A1463421EDFCBA6005C02F0 /* MagicPresenterUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A1463401EDFCBA6005C02F0 /* MagicPresenterUtil.h */; };
+		1A1463431EDFCBA6005C02F0 /* MagicPresenterUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463411EDFCBA6005C02F0 /* MagicPresenterUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		1A0884241EDF1B3800748157 /* MagicPresenterArtboardRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicPresenterArtboardRenderer.h; sourceTree = "<group>"; };
 		1A0884251EDF1B3800748157 /* MagicPresenterArtboardRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicPresenterArtboardRenderer.m; sourceTree = "<group>"; };
 		1A08842A1EDF20D300748157 /* generateImage.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = generateImage.js; sourceTree = "<group>"; };
+		1A1463401EDFCBA6005C02F0 /* MagicPresenterUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicPresenterUtil.h; sourceTree = "<group>"; };
+		1A1463411EDFCBA6005C02F0 /* MagicPresenterUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicPresenterUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,11 +202,13 @@
 				1A0884061EDF11D900748157 /* MagicPresenterUISketchPanelController.h */,
 				1A0884081EDF11D900748157 /* MagicPresenterUISketchPanelController.m */,
 				1A08840A1EDF11D900748157 /* MagicPresenterUISketchPanelDataSource.h */,
+				1A1463401EDFCBA6005C02F0 /* MagicPresenterUtil.h */,
+				1A1463411EDFCBA6005C02F0 /* MagicPresenterUtil.m */,
+				1A0884201EDF15DE00748157 /* MagicPresenter.h */,
+				1A0884211EDF15DE00748157 /* MagicPresenter.m */,
 				1A08841A1EDF154A00748157 /* MagicPresenterWindowController.h */,
 				1A08841B1EDF154A00748157 /* MagicPresenterWindowController.m */,
 				1A08841C1EDF154A00748157 /* MagicPresenterWindowController.xib */,
-				1A0884201EDF15DE00748157 /* MagicPresenter.h */,
-				1A0884211EDF15DE00748157 /* MagicPresenter.m */,
 				1A0884241EDF1B3800748157 /* MagicPresenterArtboardRenderer.h */,
 				1A0884251EDF1B3800748157 /* MagicPresenterArtboardRenderer.m */,
 				1A08842A1EDF20D300748157 /* generateImage.js */,
@@ -228,6 +234,7 @@
 				1A0884011EDF11D900748157 /* MagicPresenterUISketchPanelCellHeader.h in Headers */,
 				1A0883EF1EDF11D900748157 /* MagicPresenterUIMSInspectorStackView.h in Headers */,
 				1A0883FB1EDF11D900748157 /* MagicPresenterUISketchPanelCellDefault.h in Headers */,
+				1A1463421EDFCBA6005C02F0 /* MagicPresenterUtil.h in Headers */,
 				1A0884221EDF15DE00748157 /* MagicPresenter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +379,7 @@
 				1A0884271EDF1B3800748157 /* MagicPresenterArtboardRenderer.m in Sources */,
 				1A0883EA1EDF11D900748157 /* MagicPresenterUI.m in Sources */,
 				1A0884231EDF15DE00748157 /* MagicPresenter.m in Sources */,
+				1A1463431EDFCBA6005C02F0 /* MagicPresenterUtil.m in Sources */,
 				1A0883FD1EDF11D900748157 /* MagicPresenterUISketchPanelCellDefault.m in Sources */,
 				1A0883F81EDF11D900748157 /* MagicPresenterUISketchPanelCell.m in Sources */,
 				1A0883F41EDF11D900748157 /* MagicPresenterUISketchPanel.m in Sources */,

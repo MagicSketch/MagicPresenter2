@@ -12,12 +12,11 @@
 #import "MagicPresenterUISketchPanelCellDefault.h"
 #import "MagicPresenterUISketchPanel.h"
 #import "MagicPresenterUISketchPanelDataSource.h"
-
+#import "MagicPresenterUtil.h"
 
 @interface MagicPresenterUISketchPanelController ()
 
 @property (nonatomic, strong) id <MagicPresenterUIMSInspectorStackView> stackView; // MSInspectorStackView
-@property (nonatomic, strong) id <MagicPresenterUIMSDocument> document;
 @property (nonatomic, strong) MagicPresenterUISketchPanel *panel;
 @property (nonatomic, copy) NSArray *selection;
 
@@ -25,19 +24,20 @@
 
 @implementation MagicPresenterUISketchPanelController
 
-- (instancetype)initWithDocument:(id <MagicPresenterUIMSDocument>)document {
+- (instancetype)initWithContext:(id)context {
     if (self = [super init]) {
-        _document = document;
+        _context = context;
         _panel = [[MagicPresenterUISketchPanel alloc] initWithStackView:nil];
         _panel.datasource = self;
     }
     return self;
 }
 
-- (void)selectionDidChange:(NSArray *)selection {
-    self.selection = [selection valueForKey:@"layers"];         // To get NSArray from MSLayersArray
+- (void)selectionDidChange:(id)context {
+    _context = context;
 
-    self.panel.stackView = [(NSObject *)_document valueForKeyPath:@"inspectorController.currentController.stackView"];
+    self.selection = MagicPresenterUtilGetSelection(context);
+    self.panel.stackView = MagicPresenterUtilGetStackView(context);
     [self.panel reloadData];
 }
 
@@ -49,6 +49,7 @@
         cell = [MagicPresenterUISketchPanelCellHeader loadNibNamed:@"MagicPresenterUISketchPanelCellHeader"];
         cell.reuseIdentifier = @"header";
     }
+    cell.context = self.context;
     cell.titleLabel.stringValue = @"MagicPresenterUI";
     return cell;
 }

@@ -12,13 +12,23 @@
 @interface MagicPresenter ()
 
 @property (nonatomic, strong) MagicPresenterWindowController *window;
+@property (nonatomic, strong) id context;
+@property (nonatomic, copy) NSURL *bundleURL;
 
 @end
 
 @implementation MagicPresenter
 
+- (instancetype)initWithContext:(id)context {
+    if (self = [super init]) {
+        _bundleURL = [context valueForKeyPath:@"command.pluginBundle.url"];
+    }
+    return self;
+}
 
 - (void)play:(id)context {
+    _context = context;
+
     id document = [context valueForKeyPath:@"document"];
     id slides = [document valueForKeyPath:@"currentPage.cachedArtboards"];
 //    id slides = [document valueForKeyPath:@"immutableDocumentData.currentPage.artboards"];

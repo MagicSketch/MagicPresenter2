@@ -15,10 +15,10 @@
 @interface MagicPresenterUISketchPanelController : NSObject <MagicPresenterUISketchPanelDataSource>
 
 @property (nonatomic, strong, readonly) id <MagicPresenterUIMSInspectorStackView> stackView; // MSInspectorStackView
-@property (nonatomic, strong, readonly) id <MagicPresenterUIMSDocument> document;
 @property (nonatomic, strong, readonly) MagicPresenterUISketchPanel *panel;
+@property (nonatomic, copy) id context;
 
-- (instancetype)initWithDocument:(id <MagicPresenterUIMSDocument>)document;
+- (instancetype)initWithContext:(id)context;
 - (void)selectionDidChange:(NSArray *)selection;
 
 @end
