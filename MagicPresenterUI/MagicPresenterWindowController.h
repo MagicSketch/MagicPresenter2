@@ -11,6 +11,7 @@
 @interface MagicPresenterWindowController : NSWindowController
 
 @property (weak) IBOutlet NSImageView *imageView;
+@property (weak) IBOutlet NSProgressIndicator *loadingIndicator;
 @property (weak) IBOutlet NSButton *leftButton;
 @property (weak) IBOutlet NSButton *rightButton;
 @property (nonatomic, copy) NSArray *artboards;

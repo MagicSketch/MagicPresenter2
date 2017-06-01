@@ -21,6 +21,8 @@ _Pragma("clang diagnostic pop") \
 #define MagicPresenterUtilGetSelection(context) [MagicPresenterUtilGetDocument(context) valueForKeyPath:@"selectedLayers.layers"]
 #define MagicPresenterUtilGetStackView(context) [MagicPresenterUtilGetDocument(context) valueForKeyPath:@"inspectorController.currentController.stackView"];
 extern id MagicPresenterUtilRunPluginCommand(id context, NSString *actionID);
+#define MagicPresenterUtilGetImmutableModal(object) [object valueForKeyPath:@"immutableModelObject"]
+
 
 @interface MagicPresenterUtil : NSObject
 

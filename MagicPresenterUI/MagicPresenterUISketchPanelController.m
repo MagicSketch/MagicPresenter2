@@ -72,7 +72,7 @@
     _renderer.context = self.context;
     NSLog(@"_renderer %@", _renderer);
 
-    [_renderer renderArtboard:layer completion:^(NSImage *image) {
+    [_renderer renderArtboard:layer scale:0.2 completion:^(NSImage *image) {
         NSLog(@"image %@", image);
         cell.imageView.image = image;
     }];

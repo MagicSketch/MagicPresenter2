@@ -15,6 +15,7 @@ typedef void(^MagicPresenterArtboardRendererCompletionHandler)(NSImage *image);
 @property (nonatomic, strong) id context;
 
 - (void)renderArtboard:(id)artboard
+                 scale:(CGFloat)scale
             completion:(MagicPresenterArtboardRendererCompletionHandler)completion;    // MSArtboardGroup
 
 @end

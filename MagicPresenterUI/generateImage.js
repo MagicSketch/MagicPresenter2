@@ -16,3 +16,11 @@ var generateImage = function(document, layer, scale) {
     var image = renderer.image()
     return image;
 }
+
+var isEqual = function (first, second) {
+    if (typeof first !== typeof second) {
+        return false
+    }
+    var tree = MSTreeDiff.alloc().initWithFirstObject_secondObject_(first, second);
+    return tree.diffs().count() == 0
+}

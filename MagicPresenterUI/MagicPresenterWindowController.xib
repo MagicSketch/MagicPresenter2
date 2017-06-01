@@ -9,6 +9,9 @@
         <customObject id="-2" userLabel="File's Owner" customClass="MagicPresenterWindowController">
             <connections>
                 <outlet property="imageView" destination="bei-bG-uUa" id="xyw-Cv-cne"/>
+                <outlet property="leftButton" destination="E4n-7Y-qTt" id="MSB-Na-tFJ"/>
+                <outlet property="loadingIndicator" destination="t74-Dm-cae" id="GhY-CU-FHI"/>
+                <outlet property="rightButton" destination="4Hn-Xj-DBe" id="QGY-gC-Id1"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -50,6 +53,10 @@
                             <action selector="rightButtonDidPress:" target="-2" id="RDz-7D-W61"/>
                         </connections>
                     </button>
+                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="t74-Dm-cae">
+                        <rect key="frame" x="232" y="127" width="16" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    </progressIndicator>
                 </subviews>
             </view>
             <connections>

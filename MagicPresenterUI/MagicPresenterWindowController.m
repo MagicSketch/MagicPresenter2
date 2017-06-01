@@ -71,8 +71,27 @@
     id artboard = self.artboards[self.index];
 
     self.window.title = [NSString stringWithFormat:@"Page %@ of %@ (%@)", @(_index), @([self.artboards count] - 1), [_context valueForKeyPath:@"document.fileName"]];
-    [_renderer renderArtboard:artboard completion:^(NSImage *image) {
+
+    [self.loadingIndicator startAnimation:nil];
+    [_renderer renderArtboard:artboard scale:0.3 completion:^(NSImage *image) {
         weakSelf.imageView.image = image;
+        [_renderer renderArtboard:artboard scale:2 completion:^(NSImage *image) {
+            weakSelf.imageView.image = image;
+            [weakSelf.loadingIndicator stopAnimation:nil];
+            [weakSelf preloadNextPage];
+        }];
+    }];
+}
+
+- (void)preloadNextPage {
+    NSUInteger index = self.index + 1;
+    if (index >= [self.artboards count]) {
+        return;
+    }
+    id artboard = self.artboards[index];
+    [_renderer renderArtboard:artboard scale:0.3 completion:^(NSImage *image) {
+        [_renderer renderArtboard:artboard scale:2 completion:^(NSImage *image) {
+        }];
     }];
 }
 
