@@ -8,6 +8,7 @@
 	"compatibleVersion": "___SKETCHVERSION___",
 	"build": 1,
 	"version": "2.0.0",
+    "appcast": "https://api.sketchpacks.com/v1/plugins/io.magicsketch.MagicPresenter2/appcast"
 
 	"commands": [
 		{
