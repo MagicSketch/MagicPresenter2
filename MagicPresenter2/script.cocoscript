@@ -36,5 +36,5 @@ var onOpenDocument = function(context) {
 
 var onSelectionChanged = function(context) {
   log("onSelectionChanged");
-  context.actionContext.document.showMessage("onSelectionChanged");
+//  context.actionContext.document.showMessage("onSelectionChanged");
 }
