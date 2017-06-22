@@ -11,9 +11,9 @@
 
 	"commands": [
 		{
-			"name" : "Run",
+			"name" : "Magic Presenter 2",
 			"identifier" : "run",
-			"shortcut" : "",
+			"shortcut" : "cmd shift control p",
 			"script" : "script.cocoscript",
 			"handler" : "onRun"
 		},
@@ -39,7 +39,7 @@
          }
 	],
 	"menu": {
-		"isRoot" : false,
+		"isRoot" : true,
 		"shortcut" : "",
 		"title": "MagicPresenter2",
 		"items": [
