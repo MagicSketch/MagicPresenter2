@@ -44,6 +44,8 @@
 		1A14634C1EE06709005C02F0 /* MagicPresenterUISketchPanelCellLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A14634A1EE06709005C02F0 /* MagicPresenterUISketchPanelCellLayer.h */; };
 		1A14634D1EE06709005C02F0 /* MagicPresenterUISketchPanelCellLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A14634B1EE06709005C02F0 /* MagicPresenterUISketchPanelCellLayer.m */; };
 		1A14634F1EE06735005C02F0 /* MagicPresenterUISketchPanelCellLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A14634E1EE06735005C02F0 /* MagicPresenterUISketchPanelCellLayer.xib */; };
+		1A190B1C1EFD262F0051438D /* MagicPresenter2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A190B1B1EFD262F0051438D /* MagicPresenter2Tests.m */; };
+		1A190B211EFD26500051438D /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A0883D41EDF112F00748157 /* manifest.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,9 @@
 		1A14634A1EE06709005C02F0 /* MagicPresenterUISketchPanelCellLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicPresenterUISketchPanelCellLayer.h; sourceTree = "<group>"; };
 		1A14634B1EE06709005C02F0 /* MagicPresenterUISketchPanelCellLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicPresenterUISketchPanelCellLayer.m; sourceTree = "<group>"; };
 		1A14634E1EE06735005C02F0 /* MagicPresenterUISketchPanelCellLayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MagicPresenterUISketchPanelCellLayer.xib; sourceTree = "<group>"; };
+		1A190B191EFD262F0051438D /* MagicPresenter2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicPresenter2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A190B1B1EFD262F0051438D /* MagicPresenter2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MagicPresenter2Tests.m; sourceTree = "<group>"; };
+		1A190B1D1EFD262F0051438D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +136,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1A190B161EFD262F0051438D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -139,6 +151,7 @@
 			children = (
 				1A0883D31EDF112F00748157 /* MagicPresenter2 */,
 				1A0883E51EDF11D900748157 /* MagicPresenterUI */,
+				1A190B1A1EFD262F0051438D /* MagicPresenter2Tests */,
 				1A0883D21EDF112F00748157 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,6 +161,7 @@
 			children = (
 				1A0883D11EDF112F00748157 /* MagicPresenter2.sketchplugin */,
 				1A0883E41EDF11D900748157 /* MagicPresenterUI.framework */,
+				1A190B191EFD262F0051438D /* MagicPresenter2Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +242,15 @@
 			name = "User Subclasses";
 			sourceTree = "<group>";
 		};
+		1A190B1A1EFD262F0051438D /* MagicPresenter2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1A190B1B1EFD262F0051438D /* MagicPresenter2Tests.m */,
+				1A190B1D1EFD262F0051438D /* Info.plist */,
+			);
+			path = MagicPresenter2Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -293,6 +316,23 @@
 			productReference = 1A0883E41EDF11D900748157 /* MagicPresenterUI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		1A190B181EFD262F0051438D /* MagicPresenter2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A190B201EFD262F0051438D /* Build configuration list for PBXNativeTarget "MagicPresenter2Tests" */;
+			buildPhases = (
+				1A190B151EFD262F0051438D /* Sources */,
+				1A190B161EFD262F0051438D /* Frameworks */,
+				1A190B171EFD262F0051438D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagicPresenter2Tests;
+			productName = MagicPresenter2Tests;
+			productReference = 1A190B191EFD262F0051438D /* MagicPresenter2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -307,6 +347,10 @@
 						ProvisioningStyle = Automatic;
 					};
 					1A0883E31EDF11D900748157 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
+					1A190B181EFD262F0051438D = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -326,6 +370,7 @@
 			targets = (
 				1A0883D01EDF112F00748157 /* MagicPresenter2 */,
 				1A0883E31EDF11D900748157 /* MagicPresenterUI */,
+				1A190B181EFD262F0051438D /* MagicPresenter2Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -342,6 +387,14 @@
 				1A0883E81EDF11D900748157 /* MagicPresenterUI.js in Resources */,
 				1A1463491EE03449005C02F0 /* Assets.xcassets in Resources */,
 				1A0883FF1EDF11D900748157 /* MagicPresenterUISketchPanelCellDefault.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A190B171EFD262F0051438D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A190B211EFD26500051438D /* manifest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +452,14 @@
 				1A0883FD1EDF11D900748157 /* MagicPresenterUISketchPanelCellDefault.m in Sources */,
 				1A0883F81EDF11D900748157 /* MagicPresenterUISketchPanelCell.m in Sources */,
 				1A0883F41EDF11D900748157 /* MagicPresenterUISketchPanel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A190B151EFD262F0051438D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A190B1C1EFD262F0051438D /* MagicPresenter2Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +644,28 @@
 			};
 			name = Release;
 		};
+		1A190B1E1EFD262F0051438D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MagicPresenter2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.magicsketch.MagicPresenter2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1A190B1F1EFD262F0051438D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MagicPresenter2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.magicsketch.MagicPresenter2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -612,6 +695,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		1A190B201EFD262F0051438D /* Build configuration list for PBXNativeTarget "MagicPresenter2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A190B1E1EFD262F0051438D /* Debug */,
+				1A190B1F1EFD262F0051438D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
