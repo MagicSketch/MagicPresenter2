@@ -142,9 +142,14 @@
 
 - (void)windowWillExitFullScreen:(NSNotification *)notification {
     id artboard = self.artboards[self.index];
-    [artboard performSelector:NSSelectorFromString(@"selectLayers:") withObject:@[artboard] withObject:nil];
-    id view = [self.context valueForKeyPath:@"document.currentView"];
-    [view valueForKeyPath:@"centerSelectionInVisibleArea"];
+    if([artboard respondsToSelector:NSSelectorFromString(@"select:byExtendingSelection:")]){
+        [artboard performSelector:NSSelectorFromString(@"select:byExtendingSelection:") withObject:@true withObject:@false];
+        id view = [self.context valueForKeyPath:@"document.currentView"];
+        [view valueForKeyPath:@"centerSelectionInVisibleArea"];
+    }else{
+        NSLog(@"Select artboard API changed?");
+    }
+
 }
 
 - (void)windowDidExitFullScreen:(NSNotification *)notification {
