@@ -286,6 +286,7 @@
 				1A0883CD1EDF112F00748157 /* Frameworks */,
 				1A0883CE1EDF112F00748157 /* CopyFiles */,
 				1A0883CF1EDF112F00748157 /* ShellScript */,
+				8756D64F1F991B6A00F7142F /* Replace mainfest json placeholders */,
 			);
 			buildRules = (
 			);
@@ -427,6 +428,20 @@
 			shellPath = /bin/sh;
 			shellScript = "# Copy .js to .framework/.js\ncp ${SRCROOT}/${TARGET_NAME}/${TARGET_NAME}.js ${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}/";
 		};
+		8756D64F1F991B6A00F7142F /* Replace mainfest json placeholders */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Replace mainfest json placeholders";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "f1=\"manifest.json\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"CONTENTS_FOLDER_PATH = $CONTENTS_FOLDER_PATH\"\necho \"MPAuthorEmail = $MPAuthorEmail\"\necho \"MPAuthorHomepage = $MPAuthorHomepage\"\necho \"MPBuildNumber = $MPBuildNumber\"\necho \"MPCompatibleSketch = $MPCompatibleSketch\"\necho \"MPDescription = $MPDescription\"\necho \"MPPluginVersion = $MPPluginVersion\"\nf2=\"$CONFIGURATION_BUILD_DIR/$CONTENTS_FOLDER_PATH/Sketch/$f1\"\nif [ -f $f2 ]; then\nsed -i \"\" -e \"s/___EMAIL___/$MPAuthorEmail/g\" \"$f2\"\nsed -i \"\" -e \"s/___HOMEPAGE___/$MPAuthorHomepage/g\" \"$f2\"\nsed -i \"\" -e \"s/___BUILDNUMBER___/$MPBuildNumber/g\" \"$f2\"\nsed -i \"\" -e \"s/___SKETCHVERSION___/$MPCompatibleSketch/g\" \"$f2\"\nsed -i \"\" -e \"s/___DESCRIPTION___/$MPDescription/g\" \"$f2\"\nsed -i \"\" -e \"s/___PLUGINVERSION___/$MPPluginVersion/g\" \"$f2\"\n#atom \"$f2\"\nelse\necho \"File not found: $f2\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -515,6 +530,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MPAuthorEmail = "jamz@magicsketch.io";
+				MPAuthorHomepage = magicsketch.io;
+				MPBuildNumber = 1;
+				MPCompatibleSketch = 47;
+				MPDescription = "Present Your Deck\\/Slides in Sketch";
+				MPPluginVersion = 2.0.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -556,6 +577,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MPAuthorEmail = "jamz@magicsketch.io";
+				MPAuthorHomepage = magicsketch.io;
+				MPBuildNumber = 1;
+				MPCompatibleSketch = 47;
+				MPDescription = "Present Your Deck\\/Slides in Sketch";
+				MPPluginVersion = 2.0.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -703,6 +730,7 @@
 				1A190B1F1EFD262F0051438D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
