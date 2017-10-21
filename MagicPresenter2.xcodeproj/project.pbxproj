@@ -46,6 +46,45 @@
 		1A14634F1EE06735005C02F0 /* MagicPresenterUISketchPanelCellLayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A14634E1EE06735005C02F0 /* MagicPresenterUISketchPanelCellLayer.xib */; };
 		1A190B1C1EFD262F0051438D /* MagicPresenter2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A190B1B1EFD262F0051438D /* MagicPresenter2Tests.m */; };
 		1A190B211EFD26500051438D /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A0883D41EDF112F00748157 /* manifest.json */; };
+		879021F81F99FE13003EB14E /* MPTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87904A081F99C9B100EE048C /* MPTracker.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		879021FC1F9A098E003EB14E /* MPTracker.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 87904A081F99C9B100EE048C /* MPTracker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87904A111F99C9B200EE048C /* MPTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87904A081F99C9B100EE048C /* MPTracker.framework */; };
+		87904A431F99CA0B00EE048C /* CounterTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A1F1F99CA0B00EE048C /* CounterTracker.h */; };
+		87904A441F99CA0B00EE048C /* CounterTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A201F99CA0B00EE048C /* CounterTracker.m */; };
+		87904A451F99CA0B00EE048C /* DeferableTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A211F99CA0B00EE048C /* DeferableTracker.h */; };
+		87904A461F99CA0B00EE048C /* DeferableTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A221F99CA0B00EE048C /* DeferableTracker.m */; };
+		87904A481F99CA0B00EE048C /* Deferrable.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A241F99CA0B00EE048C /* Deferrable.h */; };
+		87904A491F99CA0B00EE048C /* Each.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A251F99CA0B00EE048C /* Each.h */; };
+		87904A4A1F99CA0B00EE048C /* Each.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A261F99CA0B00EE048C /* Each.m */; };
+		87904A4B1F99CA0B00EE048C /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A271F99CA0B00EE048C /* Event.h */; };
+		87904A4C1F99CA0B00EE048C /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A281F99CA0B00EE048C /* Event.m */; };
+		87904A4E1F99CA0B00EE048C /* MockedTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A2A1F99CA0B00EE048C /* MockedTracker.h */; };
+		87904A4F1F99CA0B00EE048C /* MockedTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A2B1F99CA0B00EE048C /* MockedTracker.m */; };
+		87904A501F99CA0B00EE048C /* MPTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A2C1F99CA0B00EE048C /* MPTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87904A511F99CA0B00EE048C /* NSMutableArray+Shuffle.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A2D1F99CA0B00EE048C /* NSMutableArray+Shuffle.h */; };
+		87904A521F99CA0B00EE048C /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A2E1F99CA0B00EE048C /* NSMutableArray+Shuffle.m */; };
+		87904A541F99CA0B00EE048C /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A301F99CA0B00EE048C /* NSString+MD5.h */; };
+		87904A551F99CA0B00EE048C /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A311F99CA0B00EE048C /* NSString+MD5.m */; };
+		87904A561F99CA0B00EE048C /* SegmentIOTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A321F99CA0B00EE048C /* SegmentIOTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87904A571F99CA0B00EE048C /* SegmentIOTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A331F99CA0B00EE048C /* SegmentIOTracker.m */; };
+		87904A591F99CA0B00EE048C /* TimedEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A351F99CA0B00EE048C /* TimedEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87904A5A1F99CA0B00EE048C /* TimedEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A361F99CA0B00EE048C /* TimedEvent.m */; };
+		87904A5C1F99CA0B00EE048C /* TimedTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A381F99CA0B00EE048C /* TimedTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87904A5D1F99CA0B00EE048C /* TimedTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A391F99CA0B00EE048C /* TimedTracker.m */; };
+		87904A5E1F99CA0B00EE048C /* TimedTrackerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A3A1F99CA0B00EE048C /* TimedTrackerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87904A601F99CA0B00EE048C /* Tracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A3C1F99CA0B00EE048C /* Tracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87904A611F99CA0B00EE048C /* Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A3D1F99CA0B00EE048C /* Tracker.m */; };
+		87904A621F99CA0B00EE048C /* TrackerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A3E1F99CA0B00EE048C /* TrackerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87904A631F99CA0B00EE048C /* TrackerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A3F1F99CA0B00EE048C /* TrackerManager.m */; };
+		87904A641F99CA0B00EE048C /* TrackerPersister.h in Headers */ = {isa = PBXBuildFile; fileRef = 87904A401F99CA0B00EE048C /* TrackerPersister.h */; };
+		87904A651F99CA0B00EE048C /* TrackerPersister.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A411F99CA0B00EE048C /* TrackerPersister.m */; };
+		87904A6A1F99CA1600EE048C /* MPTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A681F99CA1600EE048C /* MPTrackerTests.m */; };
+		87904A6B1F99CA9900EE048C /* DeferableTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A231F99CA0B00EE048C /* DeferableTrackerTests.m */; };
+		87904A6C1F99CA9900EE048C /* NSMutableArrayShuffleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A2F1F99CA0B00EE048C /* NSMutableArrayShuffleTests.m */; };
+		87904A6D1F99CA9900EE048C /* SegmentIOTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A341F99CA0B00EE048C /* SegmentIOTrackerTests.m */; };
+		87904A6E1F99CA9900EE048C /* TimedEventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A371F99CA0B00EE048C /* TimedEventTests.m */; };
+		87904A6F1F99CA9900EE048C /* TimedTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A3B1F99CA0B00EE048C /* TimedTrackerTests.m */; };
+		87904A701F99CA9900EE048C /* TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87904A421F99CA0B00EE048C /* TrackerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +94,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1A0883E31EDF11D900748157;
 			remoteInfo = MagicPresenterUI;
+		};
+		879021FA1F99FE46003EB14E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A0883C81EDF112F00748157 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87904A071F99C9B100EE048C;
+			remoteInfo = MPTracker;
+		};
+		87904A121F99C9B200EE048C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A0883C81EDF112F00748157 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87904A071F99C9B100EE048C;
+			remoteInfo = MPTracker;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -68,6 +121,16 @@
 				1A0884171EDF11EC00748157 /* MagicPresenterUI.framework in CopyFiles */,
 				1A0883D51EDF112F00748157 /* manifest.json in CopyFiles */,
 				1A0883D71EDF112F00748157 /* script.cocoscript in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		879021F01F99E850003EB14E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Frameworks;
+			dstSubfolderSpec = 1;
+			files = (
+				879021FC1F9A098E003EB14E /* MPTracker.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +180,46 @@
 		1A190B191EFD262F0051438D /* MagicPresenter2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicPresenter2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A190B1B1EFD262F0051438D /* MagicPresenter2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MagicPresenter2Tests.m; sourceTree = "<group>"; };
 		1A190B1D1EFD262F0051438D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87904A081F99C9B100EE048C /* MPTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87904A101F99C9B200EE048C /* MPTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MPTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87904A1F1F99CA0B00EE048C /* CounterTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterTracker.h; sourceTree = "<group>"; };
+		87904A201F99CA0B00EE048C /* CounterTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterTracker.m; sourceTree = "<group>"; };
+		87904A211F99CA0B00EE048C /* DeferableTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeferableTracker.h; sourceTree = "<group>"; };
+		87904A221F99CA0B00EE048C /* DeferableTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeferableTracker.m; sourceTree = "<group>"; };
+		87904A231F99CA0B00EE048C /* DeferableTrackerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeferableTrackerTests.m; sourceTree = "<group>"; };
+		87904A241F99CA0B00EE048C /* Deferrable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deferrable.h; sourceTree = "<group>"; };
+		87904A251F99CA0B00EE048C /* Each.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Each.h; sourceTree = "<group>"; };
+		87904A261F99CA0B00EE048C /* Each.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Each.m; sourceTree = "<group>"; };
+		87904A271F99CA0B00EE048C /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		87904A281F99CA0B00EE048C /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		87904A291F99CA0B00EE048C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87904A2A1F99CA0B00EE048C /* MockedTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockedTracker.h; sourceTree = "<group>"; };
+		87904A2B1F99CA0B00EE048C /* MockedTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockedTracker.m; sourceTree = "<group>"; };
+		87904A2C1F99CA0B00EE048C /* MPTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPTracker.h; sourceTree = "<group>"; };
+		87904A2D1F99CA0B00EE048C /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
+		87904A2E1F99CA0B00EE048C /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
+		87904A2F1F99CA0B00EE048C /* NSMutableArrayShuffleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableArrayShuffleTests.m; sourceTree = "<group>"; };
+		87904A301F99CA0B00EE048C /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		87904A311F99CA0B00EE048C /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		87904A321F99CA0B00EE048C /* SegmentIOTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentIOTracker.h; sourceTree = "<group>"; };
+		87904A331F99CA0B00EE048C /* SegmentIOTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentIOTracker.m; sourceTree = "<group>"; };
+		87904A341F99CA0B00EE048C /* SegmentIOTrackerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentIOTrackerTests.m; sourceTree = "<group>"; };
+		87904A351F99CA0B00EE048C /* TimedEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedEvent.h; sourceTree = "<group>"; };
+		87904A361F99CA0B00EE048C /* TimedEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedEvent.m; sourceTree = "<group>"; };
+		87904A371F99CA0B00EE048C /* TimedEventTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedEventTests.m; sourceTree = "<group>"; };
+		87904A381F99CA0B00EE048C /* TimedTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedTracker.h; sourceTree = "<group>"; };
+		87904A391F99CA0B00EE048C /* TimedTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedTracker.m; sourceTree = "<group>"; };
+		87904A3A1F99CA0B00EE048C /* TimedTrackerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedTrackerDelegate.h; sourceTree = "<group>"; };
+		87904A3B1F99CA0B00EE048C /* TimedTrackerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedTrackerTests.m; sourceTree = "<group>"; };
+		87904A3C1F99CA0B00EE048C /* Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracker.h; sourceTree = "<group>"; };
+		87904A3D1F99CA0B00EE048C /* Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tracker.m; sourceTree = "<group>"; };
+		87904A3E1F99CA0B00EE048C /* TrackerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackerManager.h; sourceTree = "<group>"; };
+		87904A3F1F99CA0B00EE048C /* TrackerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackerManager.m; sourceTree = "<group>"; };
+		87904A401F99CA0B00EE048C /* TrackerPersister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackerPersister.h; sourceTree = "<group>"; };
+		87904A411F99CA0B00EE048C /* TrackerPersister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackerPersister.m; sourceTree = "<group>"; };
+		87904A421F99CA0B00EE048C /* TrackerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackerTests.m; sourceTree = "<group>"; };
+		87904A671F99CA1600EE048C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87904A681F99CA1600EE048C /* MPTrackerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPTrackerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +234,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				879021F81F99FE13003EB14E /* MPTracker.framework in Frameworks */,
 				1A08840D1EDF11D900748157 /* CocoaScript.framework in Frameworks */,
 				1A08840F1EDF11D900748157 /* Mocha.framework in Frameworks */,
 			);
@@ -143,6 +247,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		87904A041F99C9B100EE048C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87904A0D1F99C9B200EE048C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87904A111F99C9B200EE048C /* MPTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -152,6 +271,8 @@
 				1A0883D31EDF112F00748157 /* MagicPresenter2 */,
 				1A0883E51EDF11D900748157 /* MagicPresenterUI */,
 				1A190B1A1EFD262F0051438D /* MagicPresenter2Tests */,
+				87904A091F99C9B100EE048C /* MPTracker */,
+				87904A141F99C9B200EE048C /* MPTrackerTests */,
 				1A0883D21EDF112F00748157 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,6 +283,8 @@
 				1A0883D11EDF112F00748157 /* MagicPresenter2.sketchplugin */,
 				1A0883E41EDF11D900748157 /* MagicPresenterUI.framework */,
 				1A190B191EFD262F0051438D /* MagicPresenter2Tests.xctest */,
+				87904A081F99C9B100EE048C /* MPTracker.framework */,
+				87904A101F99C9B200EE048C /* MPTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,6 +374,58 @@
 			path = MagicPresenter2Tests;
 			sourceTree = "<group>";
 		};
+		87904A091F99C9B100EE048C /* MPTracker */ = {
+			isa = PBXGroup;
+			children = (
+				87904A1F1F99CA0B00EE048C /* CounterTracker.h */,
+				87904A201F99CA0B00EE048C /* CounterTracker.m */,
+				87904A211F99CA0B00EE048C /* DeferableTracker.h */,
+				87904A221F99CA0B00EE048C /* DeferableTracker.m */,
+				87904A231F99CA0B00EE048C /* DeferableTrackerTests.m */,
+				87904A241F99CA0B00EE048C /* Deferrable.h */,
+				87904A251F99CA0B00EE048C /* Each.h */,
+				87904A261F99CA0B00EE048C /* Each.m */,
+				87904A271F99CA0B00EE048C /* Event.h */,
+				87904A281F99CA0B00EE048C /* Event.m */,
+				87904A291F99CA0B00EE048C /* Info.plist */,
+				87904A2A1F99CA0B00EE048C /* MockedTracker.h */,
+				87904A2B1F99CA0B00EE048C /* MockedTracker.m */,
+				87904A2C1F99CA0B00EE048C /* MPTracker.h */,
+				87904A2D1F99CA0B00EE048C /* NSMutableArray+Shuffle.h */,
+				87904A2E1F99CA0B00EE048C /* NSMutableArray+Shuffle.m */,
+				87904A2F1F99CA0B00EE048C /* NSMutableArrayShuffleTests.m */,
+				87904A301F99CA0B00EE048C /* NSString+MD5.h */,
+				87904A311F99CA0B00EE048C /* NSString+MD5.m */,
+				87904A321F99CA0B00EE048C /* SegmentIOTracker.h */,
+				87904A331F99CA0B00EE048C /* SegmentIOTracker.m */,
+				87904A341F99CA0B00EE048C /* SegmentIOTrackerTests.m */,
+				87904A351F99CA0B00EE048C /* TimedEvent.h */,
+				87904A361F99CA0B00EE048C /* TimedEvent.m */,
+				87904A371F99CA0B00EE048C /* TimedEventTests.m */,
+				87904A381F99CA0B00EE048C /* TimedTracker.h */,
+				87904A391F99CA0B00EE048C /* TimedTracker.m */,
+				87904A3A1F99CA0B00EE048C /* TimedTrackerDelegate.h */,
+				87904A3B1F99CA0B00EE048C /* TimedTrackerTests.m */,
+				87904A3C1F99CA0B00EE048C /* Tracker.h */,
+				87904A3D1F99CA0B00EE048C /* Tracker.m */,
+				87904A3E1F99CA0B00EE048C /* TrackerManager.h */,
+				87904A3F1F99CA0B00EE048C /* TrackerManager.m */,
+				87904A401F99CA0B00EE048C /* TrackerPersister.h */,
+				87904A411F99CA0B00EE048C /* TrackerPersister.m */,
+				87904A421F99CA0B00EE048C /* TrackerTests.m */,
+			);
+			path = MPTracker;
+			sourceTree = "<group>";
+		};
+		87904A141F99C9B200EE048C /* MPTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				87904A671F99CA1600EE048C /* Info.plist */,
+				87904A681F99CA1600EE048C /* MPTrackerTests.m */,
+			);
+			path = MPTrackerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -272,6 +447,29 @@
 				1A0883FB1EDF11D900748157 /* MagicPresenterUISketchPanelCellDefault.h in Headers */,
 				1A1463421EDFCBA6005C02F0 /* MagicPresenterUtil.h in Headers */,
 				1A0884221EDF15DE00748157 /* MagicPresenter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87904A051F99C9B100EE048C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87904A501F99CA0B00EE048C /* MPTracker.h in Headers */,
+				87904A591F99CA0B00EE048C /* TimedEvent.h in Headers */,
+				87904A621F99CA0B00EE048C /* TrackerManager.h in Headers */,
+				87904A5E1F99CA0B00EE048C /* TimedTrackerDelegate.h in Headers */,
+				87904A561F99CA0B00EE048C /* SegmentIOTracker.h in Headers */,
+				87904A5C1F99CA0B00EE048C /* TimedTracker.h in Headers */,
+				87904A601F99CA0B00EE048C /* Tracker.h in Headers */,
+				87904A511F99CA0B00EE048C /* NSMutableArray+Shuffle.h in Headers */,
+				87904A451F99CA0B00EE048C /* DeferableTracker.h in Headers */,
+				87904A491F99CA0B00EE048C /* Each.h in Headers */,
+				87904A4E1F99CA0B00EE048C /* MockedTracker.h in Headers */,
+				87904A641F99CA0B00EE048C /* TrackerPersister.h in Headers */,
+				87904A4B1F99CA0B00EE048C /* Event.h in Headers */,
+				87904A541F99CA0B00EE048C /* NSString+MD5.h in Headers */,
+				87904A481F99CA0B00EE048C /* Deferrable.h in Headers */,
+				87904A431F99CA0B00EE048C /* CounterTracker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,11 +504,13 @@
 				1A0883DF1EDF11D900748157 /* Frameworks */,
 				1A0883E01EDF11D900748157 /* Headers */,
 				1A0883E11EDF11D900748157 /* Resources */,
+				879021F01F99E850003EB14E /* CopyFiles */,
 				1A0883E21EDF11D900748157 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				879021FB1F99FE46003EB14E /* PBXTargetDependency */,
 			);
 			name = MagicPresenterUI;
 			productName = MagicPresenterUI;
@@ -334,6 +534,42 @@
 			productReference = 1A190B191EFD262F0051438D /* MagicPresenter2Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		87904A071F99C9B100EE048C /* MPTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87904A191F99C9B200EE048C /* Build configuration list for PBXNativeTarget "MPTracker" */;
+			buildPhases = (
+				87904A031F99C9B100EE048C /* Sources */,
+				87904A041F99C9B100EE048C /* Frameworks */,
+				87904A051F99C9B100EE048C /* Headers */,
+				87904A061F99C9B100EE048C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MPTracker;
+			productName = MPTracker;
+			productReference = 87904A081F99C9B100EE048C /* MPTracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		87904A0F1F99C9B200EE048C /* MPTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87904A1C1F99C9B200EE048C /* Build configuration list for PBXNativeTarget "MPTrackerTests" */;
+			buildPhases = (
+				87904A0C1F99C9B200EE048C /* Sources */,
+				87904A0D1F99C9B200EE048C /* Frameworks */,
+				87904A0E1F99C9B200EE048C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87904A131F99C9B200EE048C /* PBXTargetDependency */,
+			);
+			name = MPTrackerTests;
+			productName = MPTrackerTests;
+			productReference = 87904A101F99C9B200EE048C /* MPTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -355,6 +591,14 @@
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
 					};
+					87904A071F99C9B100EE048C = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Manual;
+					};
+					87904A0F1F99C9B200EE048C = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 1A0883CB1EDF112F00748157 /* Build configuration list for PBXProject "MagicPresenter2" */;
@@ -372,6 +616,8 @@
 				1A0883D01EDF112F00748157 /* MagicPresenter2 */,
 				1A0883E31EDF11D900748157 /* MagicPresenterUI */,
 				1A190B181EFD262F0051438D /* MagicPresenter2Tests */,
+				87904A071F99C9B100EE048C /* MPTracker */,
+				87904A0F1F99C9B200EE048C /* MPTrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -396,6 +642,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A190B211EFD26500051438D /* manifest.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87904A061F99C9B100EE048C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87904A0E1F99C9B200EE048C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +700,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "f1=\"manifest.json\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"CONTENTS_FOLDER_PATH = $CONTENTS_FOLDER_PATH\"\necho \"MPAuthorEmail = $MPAuthorEmail\"\necho \"MPAuthorHomepage = $MPAuthorHomepage\"\necho \"MPBuildNumber = $MPBuildNumber\"\necho \"MPCompatibleSketch = $MPCompatibleSketch\"\necho \"MPDescription = $MPDescription\"\necho \"MPPluginVersion = $MPPluginVersion\"\nf2=\"$CONFIGURATION_BUILD_DIR/$CONTENTS_FOLDER_PATH/Sketch/$f1\"\nif [ -f $f2 ]; then\nsed -i \"\" -e \"s/___EMAIL___/$MPAuthorEmail/g\" \"$f2\"\nsed -i \"\" -e \"s/___HOMEPAGE___/$MPAuthorHomepage/g\" \"$f2\"\nsed -i \"\" -e \"s/___BUILDNUMBER___/$MPBuildNumber/g\" \"$f2\"\nsed -i \"\" -e \"s/___SKETCHVERSION___/$MPCompatibleSketch/g\" \"$f2\"\nsed -i \"\" -e \"s/___DESCRIPTION___/$MPDescription/g\" \"$f2\"\nsed -i \"\" -e \"s/___PLUGINVERSION___/$MPPluginVersion/g\" \"$f2\"\n#atom \"$f2\"\nelse\necho \"File not found: $f2\"\nfi\n";
+			shellScript = "f1=\"manifest.json\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"CONTENTS_FOLDER_PATH = $CONTENTS_FOLDER_PATH\"\necho \"MPAuthorEmail = $MPAuthorEmail\"\necho \"MPAuthorHomepage = $MPAuthorHomepage\"\necho \"MPBuildNumber = $MPBuildNumber\"\necho \"MPCompatibleSketch = $MPCompatibleSketch\"\necho \"MPDescription = $MPDescription\"\necho \"MPPluginVersion = $MPPluginVersion\"\nf2=\"$CONFIGURATION_BUILD_DIR/$CONTENTS_FOLDER_PATH/Sketch/$f1\"\nif [ -f $f2 ]; then\nsed -i \"\" -e \"s/___EMAIL___/$MPAuthorEmail/g\" \"$f2\"\nsed -i \"\" -e \"s/___HOMEPAGE___/$MPAuthorHomepage/g\" \"$f2\"\nsed -i \"\" -e \"s/\\\"build\\\": 999,/\\\"build\\\": $MPBuildNumber,/g\" \"$f2\"\nsed -i \"\" -e \"s/___SKETCHVERSION___/$MPCompatibleSketch/g\" \"$f2\"\nsed -i \"\" -e \"s/___DESCRIPTION___/$MPDescription/g\" \"$f2\"\nsed -i \"\" -e \"s/___PLUGINVERSION___/$MPPluginVersion/g\" \"$f2\"\n#atom \"$f2\"\nelse\necho \"File not found: $f2\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -478,6 +738,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		87904A031F99C9B100EE048C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87904A611F99CA0B00EE048C /* Tracker.m in Sources */,
+				87904A521F99CA0B00EE048C /* NSMutableArray+Shuffle.m in Sources */,
+				87904A5A1F99CA0B00EE048C /* TimedEvent.m in Sources */,
+				87904A551F99CA0B00EE048C /* NSString+MD5.m in Sources */,
+				87904A571F99CA0B00EE048C /* SegmentIOTracker.m in Sources */,
+				87904A441F99CA0B00EE048C /* CounterTracker.m in Sources */,
+				87904A4C1F99CA0B00EE048C /* Event.m in Sources */,
+				87904A4A1F99CA0B00EE048C /* Each.m in Sources */,
+				87904A461F99CA0B00EE048C /* DeferableTracker.m in Sources */,
+				87904A5D1F99CA0B00EE048C /* TimedTracker.m in Sources */,
+				87904A4F1F99CA0B00EE048C /* MockedTracker.m in Sources */,
+				87904A651F99CA0B00EE048C /* TrackerPersister.m in Sources */,
+				87904A631F99CA0B00EE048C /* TrackerManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87904A0C1F99C9B200EE048C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87904A6B1F99CA9900EE048C /* DeferableTrackerTests.m in Sources */,
+				87904A6C1F99CA9900EE048C /* NSMutableArrayShuffleTests.m in Sources */,
+				87904A6D1F99CA9900EE048C /* SegmentIOTrackerTests.m in Sources */,
+				87904A6E1F99CA9900EE048C /* TimedEventTests.m in Sources */,
+				87904A6F1F99CA9900EE048C /* TimedTrackerTests.m in Sources */,
+				87904A701F99CA9900EE048C /* TrackerTests.m in Sources */,
+				87904A6A1F99CA1600EE048C /* MPTrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -485,6 +779,16 @@
 			isa = PBXTargetDependency;
 			target = 1A0883E31EDF11D900748157 /* MagicPresenterUI */;
 			targetProxy = 1A0884151EDF11E600748157 /* PBXContainerItemProxy */;
+		};
+		879021FB1F99FE46003EB14E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87904A071F99C9B100EE048C /* MPTracker */;
+			targetProxy = 879021FA1F99FE46003EB14E /* PBXContainerItemProxy */;
+		};
+		87904A131F99C9B200EE048C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87904A071F99C9B100EE048C /* MPTracker */;
+			targetProxy = 87904A121F99C9B200EE048C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -530,9 +834,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MPAuthorEmail = "jamz@magicsketch.io";
+				MPAuthorEmail = "james@magicsketch.io";
 				MPAuthorHomepage = magicsketch.io;
-				MPBuildNumber = 1;
+				MPBuildNumber = 2;
 				MPCompatibleSketch = 47;
 				MPDescription = "Present Your Deck\\/Slides in Sketch";
 				MPPluginVersion = 2.0.1;
@@ -577,9 +881,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MPAuthorEmail = "jamz@magicsketch.io";
+				MPAuthorEmail = "james@magicsketch.io";
 				MPAuthorHomepage = magicsketch.io;
-				MPBuildNumber = 1;
+				MPBuildNumber = 2;
 				MPCompatibleSketch = 47;
 				MPDescription = "Present Your Deck\\/Slides in Sketch";
 				MPPluginVersion = 2.0.1;
@@ -693,6 +997,84 @@
 			};
 			name = Release;
 		};
+		87904A1A1F99C9B200EE048C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MPTracker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.magicsketch.MPTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		87904A1B1F99C9B200EE048C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = MPTracker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.magicsketch.MPTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		87904A1D1F99C9B200EE048C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MPTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.magicsketch.MPTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		87904A1E1F99C9B200EE048C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MPTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.magicsketch.MPTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -728,6 +1110,24 @@
 			buildConfigurations = (
 				1A190B1E1EFD262F0051438D /* Debug */,
 				1A190B1F1EFD262F0051438D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87904A191F99C9B200EE048C /* Build configuration list for PBXNativeTarget "MPTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87904A1A1F99C9B200EE048C /* Debug */,
+				87904A1B1F99C9B200EE048C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87904A1C1F99C9B200EE048C /* Build configuration list for PBXNativeTarget "MPTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87904A1D1F99C9B200EE048C /* Debug */,
+				87904A1E1F99C9B200EE048C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

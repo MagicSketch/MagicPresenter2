@@ -8,6 +8,7 @@
 
 #import "MagicPresenterWindowController.h"
 #import "MagicPresenterArtboardRenderer.h"
+#import <MPTracker/TrackerManager.h>
 
 @interface MagicPresenterWindowController () <NSWindowDelegate>
 
@@ -104,10 +105,12 @@
 }
 
 - (IBAction)leftButtonDidPress:(id)sender {
+    [[TrackerManager sharedInstance] track:@"Clicked Left Button" properties:nil];
     [self goPrevious];
 }
 
 - (IBAction)rightButtonDidPress:(id)sender {
+    [[TrackerManager sharedInstance] track:@"Clicked Right Button" properties:nil];
     [self goNext];
 }
 
@@ -121,12 +124,20 @@
     switch ([event keyCode]) {
 
         case 125: // down
+            [[TrackerManager sharedInstance] track:@"Press DownArrow" properties:nil];
+            [self goNext];
+            break;
         case 124: // right
+            [[TrackerManager sharedInstance] track:@"Press RightArrow" properties:nil];
             [self goNext];
             break;
 
         case 126: // top
+            [[TrackerManager sharedInstance] track:@"Press TopArrow" properties:nil];
+            [self goPrevious];
+            break;
         case 123: // left
+            [[TrackerManager sharedInstance] track:@"Press LeftArrow" properties:nil];
             [self goPrevious];
             break;
         default:

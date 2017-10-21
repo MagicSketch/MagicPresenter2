@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MPTracker.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>MagicPresenter2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,16 @@
 			<true/>
 		</dict>
 		<key>1A190B181EFD262F0051438D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>87904A071F99C9B100EE048C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>87904A0F1F99C9B200EE048C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
