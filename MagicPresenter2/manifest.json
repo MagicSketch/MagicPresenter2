@@ -6,7 +6,7 @@
 	"homepage": "___HOMEPAGE___",
 	"identifier" : "io.magicsketch.MagicPresenter2",
 	"compatibleVersion": "___SKETCHVERSION___",
-	"build": ___BUILDNUMBER___,
+	"build": 999,
 	"version": "___PLUGINVERSION___",
     "appcast": "https://api.sketchpacks.com/v1/plugins/io.magicsketch.MagicPresenter2/appcast",
 
