@@ -836,10 +836,10 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MPAuthorEmail = "james@magicsketch.io";
 				MPAuthorHomepage = magicsketch.io;
-				MPBuildNumber = 2;
+				MPBuildNumber = 3;
 				MPCompatibleSketch = 47;
 				MPDescription = "Present Your Deck\\/Slides in Sketch";
-				MPPluginVersion = 2.0.1;
+				MPPluginVersion = 2.0.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -883,10 +883,10 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MPAuthorEmail = "james@magicsketch.io";
 				MPAuthorHomepage = magicsketch.io;
-				MPBuildNumber = 2;
+				MPBuildNumber = 3;
 				MPCompatibleSketch = 47;
 				MPDescription = "Present Your Deck\\/Slides in Sketch";
-				MPPluginVersion = 2.0.1;
+				MPPluginVersion = 2.0.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};

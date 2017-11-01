@@ -155,8 +155,24 @@
     id artboard = self.artboards[self.index];
     if([artboard respondsToSelector:NSSelectorFromString(@"select:byExtendingSelection:")]){
         [artboard performSelector:NSSelectorFromString(@"select:byExtendingSelection:") withObject:@true withObject:@false];
-        id view = [self.context valueForKeyPath:@"document.currentView"];
-        [view valueForKeyPath:@"centerSelectionInVisibleArea"];
+        id view = nil;
+        @try{
+           view = [self.context valueForKeyPath:@"document.contentDrawView"];
+        }@catch (NSException * e){
+            
+        }
+        
+        if(view == nil){
+            @try{
+                view = [self.context valueForKeyPath:@"document.currentView"];
+            }@catch(NSException * e){
+                
+            }
+        }
+        
+        if(view != nil){
+            [view valueForKeyPath:@"centerSelectionInVisibleArea"];
+        }
     }else{
         NSLog(@"Select artboard API changed?");
     }

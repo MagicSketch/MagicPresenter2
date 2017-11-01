@@ -8,7 +8,7 @@
 	"compatibleVersion": "___SKETCHVERSION___",
 	"build": 999,
 	"version": "___PLUGINVERSION___",
-    "appcast": "https://api.magicsketch.io/r/presenter/appcast.xml",
+    "appcast": "https://api.magicsketch.io/r/presenter/version.xml",
 
 	"commands": [
 		{
